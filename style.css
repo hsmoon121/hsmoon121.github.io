@@ -6,6 +6,7 @@
 
 html,
 body {
+	background-color: #222831;
     height: auto;
     min-height: 100%;
 	margin: 0;
@@ -13,7 +14,6 @@ body {
 }
 
 body {
-	background-color: #eeeeee;
 	color: #000;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
@@ -46,7 +46,7 @@ h2 {
 	font-size: 28px;
     color: #222831;
 	line-height: 1;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.2em;
 }
 
 h3 {
@@ -54,8 +54,8 @@ h3 {
 	font-weight: 900;
 	font-size: 20px;
     color: #22283188;
-	line-height: 1;
-	margin-bottom: 1.5em;
+	line-height: 160%;
+	margin-bottom: 1.2em;
 	padding-top: 1em;
 }
 
@@ -152,12 +152,14 @@ ul {
 
 
 .section-wrapper {
+	background-clip: content-box;
+	background-color: #eeeeee;
     margin-top: -72px;
     padding-top: 72px;
 }
 
 .section-wrapper:first-child {
-	background: #222831;
+	background-color: #222831; 
 }
 
 .section-wrapper:first-child .section {
@@ -227,7 +229,7 @@ ul {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 	font-size: 22px;
-	line-height: 1.3em;
+	line-height: 1.4em;
 }
 
 .research-year {
@@ -240,7 +242,7 @@ ul {
 
 .research-caption {
 	padding-bottom: 0.5em;
-	line-height: 1.4em;
+	line-height: 1.5em;
 }
 
 .publication-item {
@@ -257,13 +259,12 @@ ul {
 }
 
 .publication-item a {
-	margin-left: 5px;
-	padding: 0px 3px;
 	color: #000000;
 	background-color: #f5d86ebb;
 }
 
-.award-item {
+.award-item,
+.section .award-item:last-child {
 	margin-bottom: 1.5em;
 }
 
@@ -290,10 +291,29 @@ ul {
 	font-weight: 900;
 	font-size: 15px;
 	text-align: center;
-	line-height: 1.2em;
+	line-height: 1.3em;
 	position: relative;
 	top: 40%;
 	margin: 0px;
+}
+
+#header-bg,
+#footer-bg {
+	position: fixed;
+	left: 0;
+    right: 0;
+	height: 50%;
+	z-index: -1;
+}
+
+#header-bg {
+    top: 0;
+	background-color: #222831;
+}
+
+#footer-bg {
+    bottom: 0;
+	background-color: #ccc;
 }
 
 @media only screen and (max-width: 800px) {
@@ -367,6 +387,5 @@ ul {
 
 	td .research-thumbnail {
 		width: 100%;
-	}
-	
+	}	
 }
