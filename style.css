@@ -44,7 +44,7 @@ h1 {
 h2 {
 	font-family: 'Merriweather', serif;
 	font-weight: 900;
-	font-size: 28px;
+	font-size: 24px;
     color: #222831;
 	line-height: 1;
 	margin-bottom: 1.2em;
@@ -53,11 +53,11 @@ h2 {
 h3 {
 	font-family: 'Merriweather', serif;
 	font-weight: 900;
-	font-size: 20px;
+	font-size: 18px;
     color: #22283188;
 	line-height: 1.6em;
 	margin-bottom: 1.2em;
-	padding-top: 1em;
+	padding-top: 0em;
 }
 
 .section h3:nth-child(2) {
@@ -136,15 +136,12 @@ ul {
     float: right;
 }
 
-#container {
-}
-
 .section {
 	margin: 0 auto;
-	width: 900px;
+	width: 1000px;
 	border-bottom: 5px solid #ccc;
-	min-height: 40vh;
-	padding: 50px 20px;
+	/* min-height: 40vh; */
+	padding: 40px 20px;
 }
 
 .section p:last-child {
@@ -185,7 +182,7 @@ ul {
 .contact {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.5em;
 	padding-bottom: 10px;
 }
@@ -199,7 +196,7 @@ ul {
 }
 
 .research-table-img {
-	padding-bottom: 60px;
+	padding-bottom: 50px;
 }
 
 .research-table-txt {
@@ -208,7 +205,7 @@ ul {
 	font-size:16px; line-height: 125%;
 	text-align: left;
 	padding-left: 30px;
-	padding-bottom: 70px;
+	padding-bottom: 60px;
 }
 
 .research-table-row:last-child .research-table-img,
@@ -234,7 +231,7 @@ ul {
 .research-name {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 1.4em;
 }
 
@@ -251,9 +248,25 @@ ul {
 	line-height: 1.5em;
 }
 
-.publication-item {
-
+.news-item {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin-bottom: 0.2em;
 }
+
+.news-item .date {
+	font-weight: 700;
+}
+
+.news-item .contents {
+	font-weight: 400;
+}
+
+
+.news-item .contents a {
+	color: #000000;
+}
+
 
 .publication-item .title {
 	font-family: 'Open Sans', sans-serif;
