@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="device-width,initial-scale=1.0">
+	<meta property="og:image" content="../../imgs/thumbnail.jpg">
+	<link href="../../style.css" rel="stylesheet" media="all">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../imgs/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../imgs/favicons/favicon-16x16.png">
+	<link rel="manifest" href="../../imgs/favicons/site.webmanifest">
+	<link rel="mask-icon" href="../../imgs/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+    <title>Speeding up Inference with User Simulators through Policy Modulation</title>
+</head>
+
+<body>
+	<div id="header-bg"></div>
+	<ul id="nav" class="fixed">
+        <li class="fixed"><a href="../../index.html" id="nav-home" class="home">Hee-Seung Moon</a></li>
+	</ul>
+
+	<div class="project-container">
+		<div class="section">
+			<h1 class="project-title">
+				Speeding up Inference with User Simulators through<br>Policy Modulation
+			</h1>
+			<div class="project-authors">
+				<table>
+					<tr>
+						<td><a href="https://hsmoon121.github.io/" target="_blank">Hee-Seung Moon<sup>1</sup></a></td>
+						<td><a href="https://dodoseung.github.io/" target="_blank">Seungwon Do<sup>2</sup></a></td>
+						<td><a href="https://wonjae.kim/" target="_blank">Wonjae Kim<sup>3</sup></a></td>
+					</tr>
+					<tr>
+						<td><a href="https://www.jwseo.com/" target="_blank">Jiwon Seo<sup>1</sup></a></td>
+						<td><a href="https://minsukchang.com/" target="_blank">Minsuk Chang<sup>2</sup></a></td>
+						<td><a href="https://esports.yonsei.ac.kr/Prof" target="_blank">Byungjoo Lee<sup>1</sup></a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="project-affiliations">
+				<table>
+					<tr>
+						<td><sup>1</sup>Yonsei University</td>
+						<td><sup>2</sup>ETRI</td>
+						<td><sup>3</sup>NAVER AI Lab</td>
+					</tr>
+				</table>
+			</div>
+			<div class="project-source">
+				In ACM CHI 2022 (to appear)
+				<a href="files/camera-ready.pdf" target="_blank">[Paper]</a>
+				<a href="https://github.com/hsmoon121/pnc-dataset" target="_blank">[Dataset]</a>
+			</div>
+		</div>
+
+		<!-- Video -->
+		<div class="section"> 
+			<h2 style="text-align: center;">Presentation Video</h2>
+			<div class="video">
+				<iframe width="640" height="360" src="files/presentation.mp4"
+					frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<!-- Abstract -->
+		<div class="section">
+			<h2>Abstract</h2>
+			The simulation of user behavior with deep reinforcement learning agents has shown some recent success.
+			However, the inverse problem, that is, inferring the free parameters of the simulator from observed user behaviors, remains challenging to solve.
+			This is because the optimization of the new action policy of the simulated agent, which is required whenever the model parameters change, is computationally impractical.
+			In this study, we introduce a network modulation technique that can obtain a generalized policy that immediately adapts to the given model parameters.
+			Further, we demonstrate that the proposed technique improves the efficiency of user simulator-based inference by eliminating the need to obtain an action policy for novel model parameters.
+			We validated our approach using the latest user simulator for point-and-click behavior.
+			Consequently, we succeeded in inferring the user’s cognitive parameters and intrinsic reward settings with less than 1/1000 computational power to those of existing methods.
+		</div>
+
+		<!-- Contents -->
+		<div class="section">
+			<h2>Policy modulation</h2>
+			<table>
+				<tr>
+					<td class="contents">
+						We introduce a method to generalize the optimal policy of the simulation model to the variations in the free parameters, that is, enabling policy modulation.
+						Especially, we present a modulated Q-network, which enables feature-level modulation based on the given targeted free parameters.
+						The primary Q-network can change the mapping to Q-values through feature-level modulation according to the latent parameters.
+						The secondary network learns to extract the information from the free parameters required for the effective modulation of the primary Q-network.
+					</td>
+					<td>
+						<img class="content-images" style="padding: 20px 10px; width: 520px; margin-left: 15px;" src="files/policy_modulation.jpg"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="section">
+			<h2>Generalized point-and-click simulator</h2>
+			<div class="contents" style="margin-bottom: 20px;">
+				With this policy modulation technique, the inference process no longer requires the policy re-optimization to simulate different user behaviors.
+				After training a point-and-click simulation model with policy modulation technique, we were able to investigate how the simulated behavior changes according to the variations in the user’s reward formulation or cognitive capabilities, by only using a single model.
+			</div>
+			<table>
+				<tr style="text-align: center;">
+					<td>Simulation with high weight on <b>successful click</b></td>
+					<td>Simulation with high weight on <b>completion time</b></td>
+				</tr>
+				<tr>
+					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/success_high.gif"/></td>
+					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/time_high.gif"/></td>
+				</tr>
+				<tr style="text-align: center;">
+					<td>Simulation with high <b>vision noise</b></td>
+					<td>Simulation with low <b>vision noise</b></td>
+				</tr>
+				<tr>
+					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/vision_high.gif"/></td>
+					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/vision_low.gif"/></td>
+				<tr>
+			</table>
+		</div>	
+		<div class="section">
+			<h2>Inferring cognitive capabilities from observed behavior</h2>
+			<table>
+				<tr>
+					<td style="text-align: center;">
+						<img class="content-images" style="padding: 20px 10px; width: 100%; margin-bottom: 15px;" src="files/inference_result.jpg"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="contents">
+						With the trained user simulator, we inferred the cognitive capabitilites of 20 participants, by only based on their observed point-and-click behavior.
+						Among the three cognitive capabilities, we succeeded in inferring the baseline values of vision noise (&sigma;_v) and internal clock precision (c_&sigma;).
+						Our method significantly reduce the computational cost of the inference with user simulators.
+						An inference process that would have taken thousands of hours, can be done in a few hours with our method.
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<p class="credit">Hee-Seung Moon&nbsp;&nbsp;|&nbsp;&nbsp;hs.moon@yonsei.ac.kr</p>
+	</div>
+
+	<div id="footer-bg"></div>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</body>
+</html>
