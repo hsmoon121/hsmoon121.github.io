@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="device-width,initial-scale=1.0">
-	<meta property="og:image" content="../../imgs/thumbnail.jpg">
+	<meta property="og:image" content="files/thumbnail.jpg">
 	<link href="../../style.css" rel="stylesheet" media="all">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -62,9 +62,10 @@
 		<!-- Video -->
 		<div class="section"> 
 			<h2 style="text-align: center;">Presentation Video</h2>
-			<div class="video">
-				<iframe width="640" height="360" src="files/presentation.mp4"
-					frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<div class="presentation-video">
+				<video controls="true" class="embed-responsive-item">
+					<source src="files/presentation.mp4" type="video/mp4" />
+				</video>
 			</div>
 		</div>
 
@@ -104,22 +105,26 @@
 				After training a point-and-click simulation model with policy modulation technique, we were able to investigate how the simulated behavior changes according to the variations in the user’s reward formulation or cognitive capabilities, by only using a single model.
 			</div>
 			<table>
-				<tr style="text-align: center;">
-					<td>Simulation with high weight on <b>successful click</b></td>
-					<td>Simulation with high weight on <b>completion time</b></td>
+				<tr>
+					<td>
+						<div style="display: block; text-align: center;">Simulation with high weight on <b>successful click</b></div>
+						<img class="content-images" style="width: 100%; margin: 0px;" src="files/success_high.gif"/>
+					</td>
+					<td>
+						<div style="display: block; text-align: center;">Simulation with high weight on <b>completion time</b></div>
+						<img class="content-images" style="width: 100%; margin: 0px;" src="files/time_high.gif"/>
+					</td>
 				</tr>
 				<tr>
-					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/success_high.gif"/></td>
-					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/time_high.gif"/></td>
+					<td>
+						<div style="display: block; text-align: center;">Simulation with high <b>vision noise</b></div>
+						<img class="content-images" style="width: 100%; margin: 0px;" src="files/vision_high.gif"/>
+					</td>
+					<td>
+						<div style="display: block; text-align: center;">Simulation with low <b>vision noise</b></div>
+						<img class="content-images" style="width: 100%; margin: 0px;" src="files/vision_low.gif"/>
+					</td>
 				</tr>
-				<tr style="text-align: center;">
-					<td>Simulation with high <b>vision noise</b></td>
-					<td>Simulation with low <b>vision noise</b></td>
-				</tr>
-				<tr>
-					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/vision_high.gif"/></td>
-					<td><img class="content-images" style="width: 100%; margin: 0px;" src="files/vision_low.gif"/></td>
-				<tr>
 			</table>
 		</div>	
 		<div class="section">
