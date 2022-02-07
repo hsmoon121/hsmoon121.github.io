@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Speeding up Inference with User Simulators through Policy Modulation</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="device-width,initial-scale=1.0">
@@ -15,7 +16,17 @@
 	<link rel="mask-icon" href="../../imgs/favicons/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-    <title>Speeding up Inference with User Simulators through Policy Modulation</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVJ350C8P3"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-HVJ350C8P3');
+	</script>
+
 </head>
 
 <body>
@@ -86,14 +97,14 @@
 			<h2>Policy modulation</h2>
 			<table>
 				<tr>
-					<td class="contents">
+					<td class="contents" style="margin-left: 15px;">
 						We introduce a method to generalize the optimal policy of the simulation model to the variations in the free parameters, that is, enabling policy modulation.
 						Especially, we present a modulated Q-network, which enables feature-level modulation based on the given targeted free parameters.
 						The primary Q-network can change the mapping to Q-values through feature-level modulation according to the latent parameters.
 						The secondary network learns to extract the information from the free parameters required for the effective modulation of the primary Q-network.
 					</td>
 					<td>
-						<img class="content-images" style="padding: 20px 10px; width: 520px; margin-left: 15px;" src="files/policy_modulation.jpg"/>
+						<img class="content-images" style="padding: 20px 10px; width: 520px;" src="files/policy_modulation.jpg"/>
 					</td>
 				</tr>
 			</table>
