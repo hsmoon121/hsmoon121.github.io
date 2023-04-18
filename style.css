@@ -441,7 +441,7 @@ a.research-publication {
     background: none;
 	color: #325b97;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 22px;
+	font-size: 19px;
 	font-style: normal;
 	font-weight: 700;
 	padding-left: 10px;
@@ -471,7 +471,7 @@ a.research-publication {
 }
 
 .bibtex-container {
-	width: 96%;
+	width: 100%;
 	max-width: 1000px;
 	margin: 20px auto;
 	padding: 20px;
@@ -485,6 +485,26 @@ pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	font-family: "Consolas", "Monaco", monospace;
+}
+
+.project-source .download-button {
+	display: inline-flex;
+	align-items: center;
+	background-color: #325b97;
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.project-source .download-button:hover {
+	background-color: #325b97bb;
+	color: white;
+}
+
+.project-source .download-button .fas {
+	margin-right: 10px;
 }
 
 @media only screen and (max-width: 1000px) {

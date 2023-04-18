@@ -14,6 +14,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="../../imgs/favicons/favicon-16x16.png">
 	<link rel="manifest" href="../../imgs/favicons/site.webmanifest">
 	<link rel="mask-icon" href="../../imgs/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 
@@ -64,10 +65,18 @@
 			</table>
 			</div>
 			<div class="project-source">
-				Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI 2023)<br/><br/>
-				<a href="files/camera-ready.pdf" target="_blank">[Paper]</a>
-				<a href="files/supplements.pdf" target="_blank">[Supplements]</a>
-				<a style="pointer-events: none;" target="_blank">[Code (to be released)]</a>
+				<div>Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI 2023)</div>
+				<div style="padding-top: 10px;">
+					<a href="files/camera-ready.pdf" target="_blank" class="download-button">
+						<i class="fas fa-file-pdf"></i> Paper
+					</a>
+					<a href="files/supplements.pdf" target="_blank" class="download-button">
+						<i class="fas fa-file-pdf"></i> Supplements
+					</a>
+					<a href="https://github.com/hsmoon121/amortized-inference-hci" target="_blank" class="download-button">
+						<i class="fa-brands fa-github"></i>&nbsp;Code (to be released)
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -80,22 +89,22 @@
 
 		<!-- Contents -->
 		<div class="section">
-			<h2>How can we adopt user data to interpret user?</h2>
+			<h2>How can we make inference about user from data?</h2>
 			<table>
 				<tr>
 					<td class="contents" style="margin-right: 15px; font-size: 18px;">
 						<span class="date">&#8226; 
-							User simulation models, fit to observed data, can identify individual-specific parameters to characterize users.
+							Fitting user simulation models to observed data can characterize users by identified parameters.
 						</span><br/><br/>
 						<span class="date">&#8226; 
-							Traditional parameter inference methods face challenges due to their computational intensity, taking hours or days per user.
+							Traditional inference methods face challenges due to computational intensity, taking hours or days per user.
 						</span><br/><br/>
 						<span class="date">&#8226; 
-							Amortized inference provides a faster, robust approach for interpreting user behavior using simulation models, utilizing a trained density estimator model for efficient, multiple inference tasks.
+							Amortized inference provides a faster, more robust approach for interpreting user behavior, utilizing a trained density estimator model.
 						</span><br/><br/>
 						<span class="date">&#8226; 
-							Our case studies examined amortized inference's computational efficiency, predictive accuracy of individually-fit user models, and introduced a new method for large-scale user data analysis.
-						</span><br/><br/>
+							Our studies showed the computational efficiency and predictive accuracy with amortized inference, and showcased its power for large-scale user data analysis.
+						</span>
 					</td>
 					<td>
 						<img class="content-images" style="padding: 20px 10px; width: 450px;" src="files/teaser.png"/>
@@ -123,15 +132,15 @@
 			<div class="bibtex-container">
 				<pre id="bibtex-content">
 @inproceedings{moon2023amortized,
-title={Amortized Inference with User Simulations},
-author={Moon, Hee-Seung and Oulasvirta, Antti and Lee, Byungjoo},
-booktitle={Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
-year={2023},
-publisher = {Association for Computing Machinery},
-url = {https://hsmoon121.github.io/projects/chi23-amortized-inference},
-doi = {10.1145/3544548.3581439},
-location = {Hamburg, Germany},
-series = {CHI '23}
+  title={Amortized Inference with User Simulations},
+  author={Moon, Hee-Seung and Oulasvirta, Antti and Lee, Byungjoo},
+  booktitle={Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+  year={2023},
+  publisher = {Association for Computing Machinery},
+  url = {https://hsmoon121.github.io/projects/chi23-amortized-inference},
+  doi = {10.1145/3544548.3581439},
+  location = {Hamburg, Germany},
+  series = {CHI '23}
 }</pre>
 			</div>
 		</div>
