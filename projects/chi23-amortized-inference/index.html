@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Speeding up Inference with User Simulators through Policy Modulation</title>
+    <title>Amortized Inference with User Simulations</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="device-width,initial-scale=1.0">
@@ -16,7 +16,6 @@
 	<link rel="mask-icon" href="../../imgs/favicons/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
-	<meta http-equiv="refresh" content="0; URL=files/camera-ready.pdf">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVJ350C8P3"></script>
@@ -30,9 +29,119 @@
 
 </head>
 
-<head>
-  </head>
-
 <body>
+	<div id="header-bg"></div>
+	<ul id="nav" class="fixed">
+        <li class="fixed"><a href="../../index.html" id="nav-home" class="home">Hee-Seung Moon</a></li>
+	</ul>
+
+	<div class="project-container">
+		<div class="section">
+			<h1 class="project-title">
+				Amortized Inference with User Simulations
+			</h1>
+			<div class="project-authors">
+				<table>
+					<tr>
+						<td><a href="https://hsmoon121.github.io/" target="_blank">Hee-Seung Moon<sup>1, 2</sup></a></td>
+						<td><a href="http://users.comnet.aalto.fi/oulasvir/" target="_blank">Antti Oulasvirta<sup>2</sup></a></td>
+						<td><a href="https://esports.yonsei.ac.kr/" target="_blank">Byungjoo Lee<sup>1</sup></a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="project-affiliations" style="padding-top: 10px;">
+				<table>
+					<tr>
+						<td>
+							<div style="vertical-align: top; display: inline-block;"><sup>1</sup></div>
+							<img src="files/yonsei.png" alt="yonsei" height="100">
+						</td>
+						<td>
+							<div style="vertical-align: top; display: inline-block;"><sup>2</sup></div>
+							<img src="files/aalto.svg" alt="aalto" height="100">
+						</td>
+					</tr>
+			</table>
+			</div>
+			<div class="project-source">
+				Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI 2023)<br/><br/>
+				<a href="files/camera-ready.pdf" target="_blank">[Paper]</a>
+				<a href="files/supplements.pdf" target="_blank">[Supplements]</a>
+				<a style="pointer-events: none;" target="_blank">[Code (to be released)]</a>
+			</div>
+		</div>
+
+		<!-- Video -->
+		<div class="section" style="text-align: center;"> 
+			<iframe width="640" height="360"
+			src="https://www.youtube.com/embed/Lx9jKuzsASA">
+			</iframe>
+		</div>
+
+		<!-- Contents -->
+		<div class="section">
+			<h2>How can we adopt user data to interpret user?</h2>
+			<table>
+				<tr>
+					<td class="contents" style="margin-right: 15px; font-size: 18px;">
+						<span class="date">&#8226; 
+							User simulation models, fit to observed data, can identify individual-specific parameters to characterize users.
+						</span><br/><br/>
+						<span class="date">&#8226; 
+							Traditional parameter inference methods face challenges due to their computational intensity, taking hours or days per user.
+						</span><br/><br/>
+						<span class="date">&#8226; 
+							Amortized inference provides a faster, robust approach for interpreting user behavior using simulation models, utilizing a trained density estimator model for efficient, multiple inference tasks.
+						</span><br/><br/>
+						<span class="date">&#8226; 
+							Our case studies examined amortized inference's computational efficiency, predictive accuracy of individually-fit user models, and introduced a new method for large-scale user data analysis.
+						</span><br/><br/>
+					</td>
+					<td>
+						<img class="content-images" style="padding: 20px 10px; width: 450px;" src="files/teaser.png"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- Abstract -->
+		<div class="section">
+			<h2>Abstract</h2>
+			There have been significant advances in simulation models predicting human behavior across various interactive tasks.
+			One issue remains, however: identifying the parameter values that best describe an individual user.
+			These parameters often express personal cognitive and physiological characteristics, and inferring their exact values has significant effects on individual-level predictions.
+			Still, the high complexity of simulation models usually causes parameter inference to consume prohibitively large amounts of time, as much as days per user.
+			We investigated amortized inference for its potential to reduce inference time dramatically, to mere tens of milliseconds.
+			Its principle is to pre-train a neural proxy model for probabilistic inference, using synthetic data simulated from a range of parameter combinations.
+			From examining the efficiency and prediction performance of amortized inference in three challenging cases that involve real-world data (menu search, point-and-click, and touchscreen typing), the paper demonstrates that an amortized inference approach permits analyzing large-scale datasets by means of simulation models.
+			It also addresses emerging opportunities and challenges in applying amortized inference in HCI.
+		</div>
+
+		<!-- Bibtex -->
+		<div class="section">
+			<h2>Citation</h2>
+			<div class="bibtex-container">
+				<pre id="bibtex-content">
+@inproceedings{moon2023amortized,
+title={Amortized Inference with User Simulations},
+author={Moon, Hee-Seung and Oulasvirta, Antti and Lee, Byungjoo},
+booktitle={Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+year={2023},
+publisher = {Association for Computing Machinery},
+url = {https://hsmoon121.github.io/projects/chi23-amortized-inference},
+doi = {10.1145/3544548.3581439},
+location = {Hamburg, Germany},
+series = {CHI '23}
+}</pre>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<p class="credit">Hee-Seung Moon&nbsp;&nbsp;|&nbsp;&nbsp;hee-seung.moon@aalto.fi</p>
+	</div>
+
+	<div id="footer-bg"></div>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </body>
 </html>

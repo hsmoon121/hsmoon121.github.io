@@ -264,12 +264,13 @@ ul {
 	line-height: 1.5em;
 }
 
-.research-publication {
+a.research-publication {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
-	color: #666666;
-	padding-bottom: 0.5em;
+	color: #000000;
 	line-height: 1.5em;
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 .news-item {
@@ -293,6 +294,9 @@ ul {
 	color: #000000;
 }
 
+.publication-item{
+	transition: background-color 0.5s;
+}
 
 .publication-item .title {
 	font-family: 'Open Sans', sans-serif;
@@ -311,6 +315,10 @@ ul {
 	margin-right: 5px;
 	padding: 0px 2px;
 	color: #000000;
+	background-color: #f5d86e66;
+}
+
+.publication-item.highlight {
 	background-color: #f5d86e66;
 }
 
@@ -376,7 +384,7 @@ ul {
 	color: #000000;
 	font-family: 'Merriweather', serif;
 	font-weight: 900;
-	font-size: 28px;
+	font-size: 30px;
 	line-height: 1.5em;
 	margin-bottom: 0.5em;
 }
@@ -397,7 +405,7 @@ ul {
 	display: block;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 20px;
 	padding: 0px 10px;
 	text-decoration: none;
 }
@@ -423,7 +431,8 @@ ul {
 .project-source {
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
+	font-style: italic;
+	font-weight: 500;
 	padding-top: 1.5em;
 }
 
@@ -432,6 +441,8 @@ ul {
     background: none;
 	color: #325b97;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	font-style: normal;
 	font-weight: 700;
 	padding-left: 10px;
 	text-decoration: none;
@@ -457,6 +468,23 @@ ul {
 
 .project-container .section:last-child {
 	border-bottom: none;
+}
+
+.bibtex-container {
+	width: 96%;
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+pre {
+	margin: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-family: "Consolas", "Monaco", monospace;
 }
 
 @media only screen and (max-width: 1000px) {

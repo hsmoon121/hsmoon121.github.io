@@ -247,3 +247,24 @@ $(document).scroll(function() {
 	}
 
 });
+
+// scrolling to & higlighting publication
+function scrollToPublication(id) {
+	const element = document.getElementById(id);
+	const navbarHeight = 72;
+	const extraMargin = 20;
+
+	if (!element) return;
+
+	const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraMargin;
+
+	window.scrollTo({
+			top: elementPosition,
+			behavior: 'smooth'
+	});
+
+	element.classList.add('highlight');
+	setTimeout(() => {
+			element.classList.remove('highlight');
+	}, 1000);
+}
