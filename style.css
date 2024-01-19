@@ -6,7 +6,7 @@
 
 html,
 body {
-	background-color: #222831;
+	background-color: #222222;
     height: auto;
     min-height: 100%;
 	margin: 0;
@@ -21,6 +21,7 @@ body {
 	font: 16px;
 	line-height: 160%;
 }
+
 
 h1,
 h2,
@@ -45,7 +46,7 @@ h2 {
 	font-family: 'Merriweather', serif;
 	font-weight: 900;
 	font-size: 24px;
-    color: #222831;
+    color: #222222;
 	line-height: 1;
 	margin-bottom: 1.2em;
 }
@@ -54,7 +55,7 @@ h3 {
 	font-family: 'Merriweather', serif;
 	font-weight: 900;
 	font-size: 18px;
-    color: #22283188;
+    color: #22222288;
 	line-height: 1.6em;
 	margin-bottom: 1.2em;
 	padding-top: 0em;
@@ -75,7 +76,7 @@ ul {
 }
 
 #nav {
-    background: #222831;
+    background: #222222;
     left: 0;
     right: 0;
     top: 0;
@@ -170,13 +171,35 @@ ul {
 }
 
 .section-wrapper:first-child {
-	background-color: #222831;
+	background-color: #222222;
 }
 
 .section-wrapper:first-child .section {
 	padding-top: 200px;
 	border-bottom: none;
 	color: #f2f2f2;
+}
+
+.profile-img {
+	float: left;
+	margin-right: 60px;
+	width: 200px;
+}
+
+.profile-img img {
+	display: block;
+	width: 100%; 
+	height: auto;
+}
+
+.img-caption {
+	font-size: 0.8em;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.profile-text {
+	overflow: hidden;
 }
 
 #section-4 .section {
@@ -203,6 +226,12 @@ ul {
 
 .contact a {
 	color: #bdf1f6;
+}
+
+.hidden { display: none; }
+.show-more { 
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 .research-table-row {
@@ -239,8 +268,8 @@ ul {
 }
 
 .research-thumbnail {
-	border: 1px solid #222831;
-	width: 240px;
+	border: 1px solid #222222;
+	width: 320px;
 }
 
 .research-name {
@@ -294,9 +323,29 @@ a.research-publication {
 	color: #000000;
 }
 
-.publication-item{
+.publication-item {
 	transition: background-color 0.5s;
+	display: flex; /* This creates a flexbox layout */
+	align-items: flex-start; /* Aligns items to the start of the flex direction (top, in this case) */
+	margin-bottom: 20px; /* Optional: for some space between publication items */
 }
+
+.publication-thumbnail {
+	flex-shrink: 0; /* Prevents the thumbnail from shrinking */
+	width: 200px; /* Replace with the width you desire */
+	margin-right: 25px; /* Optional: for some space between the image and the text */
+}
+
+.publication-thumbnail img {
+	width: 100%; /* Makes sure the image takes the full width of its parent */
+	height: auto; /* Ensures the image's aspect ratio is maintained */
+	border: 1px solid #222222;
+}
+
+.publication-about {
+	flex-grow: 1; /* Allows the text part to take the remaining space */
+}
+
 
 .publication-item .title {
 	font-family: 'Open Sans', sans-serif;
@@ -340,7 +389,7 @@ a.research-publication {
 
 .bottom {
 	background: #ccc;
-	color: #222831;
+	color: #222222;
 	height: 80px;
 }
 
@@ -366,7 +415,7 @@ a.research-publication {
 
 #header-bg {
     top: 0;
-	background-color: #222831;
+	background-color: #222222;
 }
 
 #footer-bg {
@@ -463,7 +512,7 @@ a.research-publication {
 .project-container .content-images {
 	text-align: center;
 	background-color: white;
-	border: 1px solid #222831;
+	border: 1px solid #222222;
 }
 
 .project-container .section:last-child {
@@ -544,6 +593,14 @@ pre {
 	h1 {
 		font-size: 36px;
 	}
+
+	.profile-img {
+		display: none;
+	}
+
+	.publication-thumbnail {
+		width: 100px;
+	}
 	
 	.section-wrapper:first-child .section {
 		padding-top: 100px;
@@ -593,7 +650,7 @@ pre {
 	h1 {
 		font-size: 28px;
 	}
-
+	
 	.project-container td {
 		display:inline-block;
 		text-align: left;

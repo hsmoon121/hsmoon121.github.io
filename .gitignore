@@ -1,2 +1,3 @@
-imgs/figure.ai
+*.ai
+archive/
 .DS_store
