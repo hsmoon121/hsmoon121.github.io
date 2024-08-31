@@ -216,6 +216,9 @@ ul {
 	text-decoration: none;
 }
 
+.about strong {
+}
+
 .contact {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
