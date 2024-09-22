@@ -190,6 +190,7 @@ ul {
 	display: block;
 	width: 100%; 
 	height: auto;
+	border-radius: 5px;
 }
 
 .img-caption {
@@ -324,6 +325,12 @@ a.research-publication {
 
 .news-item .contents a {
 	color: #000000;
+}
+
+.publication-full a {
+	color: #000000;
+	text-decoration: underline;
+	background-color: #f5d86e66;
 }
 
 .publication-item {
